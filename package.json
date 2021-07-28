@@ -4,7 +4,10 @@
   "author": "KTS Studio",
   "license": "MIT",
   "description": "Package with utils for OK apps",
-  "keywords": [],
+  "keywords": [
+    "odnoklassniki",
+    "fapi"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
