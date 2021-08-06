@@ -11,7 +11,7 @@ export default () => {
 
   const params = window.FAPI.Util.getRequestParameters();
 
-  window.app_id = params.apiconnection.split('_')[0];
+  window.app_id = params.apiconnection?.split('_')?.[0] || '';
   window.api_server = params.api_server;
   window.apiconnection = params.apiconnection;
   window.user_id = params.logged_user_id;
