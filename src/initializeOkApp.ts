@@ -17,6 +17,7 @@ export default () => {
   window.user_id = params.logged_user_id;
   window.is_mobile = params.mob;
   window.platform = params.mob_platform || 'desktop_web';
+  window.custom_args = params.custom_args;
 
   window.is_mobile
     ? document.body.classList.add('mobile')

@@ -10,4 +10,5 @@ export interface WindowType extends CommonWindowType {
   apiconnection: string;
   FAPI: any;
   API_callback: any;
+  custom_args: string;
 }

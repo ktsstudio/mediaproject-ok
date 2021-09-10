@@ -1,3 +1,6 @@
+#### v1.0.4
+- [+] initializeOkApp: custom_args param
+
 #### v1.0.3
 - [+] okApi
 - [+] okUI
