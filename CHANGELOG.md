@@ -1,3 +1,10 @@
+#### v1.0.6
+- [*] sharePost: handle use denial
+- [*] shareMoment: handle use denial
+
+#### v1.0.5
+- [+] initializeOkApp: custom_args param
+
 #### v1.0.4
 - [+] initializeOkApp: custom_args param
 

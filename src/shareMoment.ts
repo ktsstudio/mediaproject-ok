@@ -3,7 +3,7 @@ import axios from 'axios';
 import okApi from './okApi';
 import okUI from './okUI';
 
-const shareMoment = async (file: File): Promise<boolean> => {
+const shareMoment = async (file: File): Promise<boolean | null> => {
   try {
     const resultPermission = await okApi('users.hasAppPermission', {
       ext_perm: 'PHOTO_CONTENT',
@@ -38,7 +38,8 @@ const shareMoment = async (file: File): Promise<boolean> => {
 
     return Boolean(result);
   } catch (error) {
-    return false;
+    // 'null', если пользователь отказался шерить
+    return error === 'null' ? null : false;
   }
 };
 

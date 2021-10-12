@@ -4,7 +4,7 @@ import okApi from './okApi';
 import okUI from './okUI';
 import { SharePostParams } from './types/sharing';
 
-const sharePost = async ({ file, message, appLink }: SharePostParams) => {
+const sharePost = async ({ file, message, appLink }: SharePostParams): Promise<boolean | null> => {
   try {
     const resultPermission = await okApi('users.hasAppPermission', {
       ext_perm: 'PHOTO_CONTENT',
@@ -55,8 +55,9 @@ const sharePost = async ({ file, message, appLink }: SharePostParams) => {
     });
 
     return Boolean(result);
-  } catch (e) {
-    return false;
+  } catch (error) {
+    // 'null', если пользователь отказался шерить
+    return error === 'null' ? null : false;
   }
 };
 
